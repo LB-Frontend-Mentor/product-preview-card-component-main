@@ -1,6 +1,44 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../assets/Montserrat-VariableFont_wght.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url(../assets/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+
+  /* Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /* Neutral */
+  --v-dark-blue: hsl(212, 21%, 14%);
+  --gray-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  
+  /* Font */
+  --body: normal 500 0.825rem 'Montserrat', monospace;
+  
+  /* Image Aspect Ratios */
+  --mobile-aspect: calc(240 / 343 * 100%); 
+  --desktop-aspect: calc(450 / 300 * 100%)
+}
+
+body {
+  position: relative;
+  font: var(--body);
+  background-color: var(--cream);
+}
+
 .attribution {
   font-size: 1rem;
   text-align: center;
+  border: 2px solid red;
 }
 
 .attribution > p {
@@ -11,88 +49,48 @@
   color: hsl(228, 45%, 44%);
 }
 
-:root {
-  /* Colors */
-  /* Primary */
-  --dark-cyan: hsl(158, 36%, 37%);
-  --cream: hsl(30, 38%, 92%);
-  /* Neutral */
-  --v-dark-blue: hsl(212, 21%, 14%);
-  --gray-blue: hsl(228, 12%, 48%);
-  --white: hsl(0, 0%, 100%);
-  /* Font */
-  --body: normal 500 0.825rem 'Montserrat', monospace
-}
-
-/* Basic Layout */
-
-body {
-  position: relative;
-}
-
 .container {
   position: absolute;
   top: 50%;
   left: 50%;
   display: flex;
   flex-direction: column;
-  transform: translate(-50%, 10%);
+  transform: translate(-50%, 40%);
   border: 2px solid black;
-  z-index: -1;
+  width: 80%;
+  max-width: 343px;
 }
 
 .content-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-@media screen and (max-width: 750px) {
+.image-wrapper {
+  padding-top: var(--mobile-aspect);
+  position: relative;
+  background-image: url("../images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.image {
+  display: block;
+}
+
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 50%;
+    max-width: 600px;
+  }
   .content-container {
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+  }
+  .image-wrapper {
+    padding-top: var(--desktop-aspect);
+    background-image: url("../images/image-product-desktop.jpg");
   }
 }
-
-/* Sizing */
-
-img {
-  width: 50%;
-}
-
-@media screen and (max-width: 750px) {
-  img {
-    width: 100%;
-  }
-}
-
-/* fonts */
-
-@font-face {
-  font-family: "Montserrat";
-  src: url(../assets/Montserrat-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "Fraunces";
-  src: url(../assets/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
-}
-
-body {
-  font: var(--body);
-}
-
-/* Colors */
-
-body {
-  background-color: var(--cream);
-}
-
-.attribution {
-  border: 2px solid red;
-}
-
-.content-container {
-    border: 2px solid blue;
-  }
-
-/* fine grained layout (i.e centering text etc) */
 
 
