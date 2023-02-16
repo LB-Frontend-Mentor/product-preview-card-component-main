@@ -1,0 +1,98 @@
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution > p {
+  font-size: 1.25rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  /* Colors */
+  /* Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /* Neutral */
+  --v-dark-blue: hsl(212, 21%, 14%);
+  --gray-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  /* Font */
+  --body: normal 500 0.825rem 'Montserrat', monospace
+}
+
+/* Basic Layout */
+
+body {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, 10%);
+  border: 2px solid black;
+  z-index: -1;
+}
+
+.content-container {
+  display: flex;
+}
+
+@media screen and (max-width: 750px) {
+  .content-container {
+    flex-direction: column;
+  }
+}
+
+/* Sizing */
+
+img {
+  width: 50%;
+}
+
+@media screen and (max-width: 750px) {
+  img {
+    width: 100%;
+  }
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../assets/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url(../assets/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+body {
+  font: var(--body);
+}
+
+/* Colors */
+
+body {
+  background-color: var(--cream);
+}
+
+.attribution {
+  border: 2px solid red;
+}
+
+.content-container {
+    border: 2px solid blue;
+  }
+
+/* fine grained layout (i.e centering text etc) */
+
+
