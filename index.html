@@ -5,25 +5,40 @@
   <meta name="description" content="Product-Preview-Card - Lorentz Bloom">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/reset.css">
-  <script src="https://kit.fontawesome.com/4c75952efd.js" crossorigin="anonymous"></script>
+  <script defer src="https://kit.fontawesome.com/4c75952efd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Product preview card component</title>
+  <style>
+    @font-face {
+  font-family: "Montserrat";
+  src: url(./assets/Montserrat-VariableFont_wght.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url(./assets/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+  font-display: swap;
+}
+  </style>
 </head>
 <body>
   <div class="container">
     <div class="content-container">
       <div class="image-wrapper"></div>
       <div class="text">
-        <h3>Perfume</h3>
-        <h2>Gabrielle Essence Eau De Parfum</h2>
-        <p>
+        <h3 class="subtitle">Perfume</h3>
+        <h2 class="title">Gabrielle Essence Eau De Parfum</h2>
+        <p class="body-text">
           A floral, solar and voluptuous interpretation composed by Olivier Polge,
           Perfumer-Creator for the House of CHANEL.
         </p>
         <div class="cta">
-          <span class="current-price">$149.99</span>
-          <span class="previous-price">$169.99</span>
+          <div class="cta--price-wrapper">
+            <span class="current-price">$149.99</span>
+            <span class="previous-price">$169.99</span>
+          </div>
           <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
         </div>
       </div>

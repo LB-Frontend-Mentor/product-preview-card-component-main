@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url(../assets/Montserrat-VariableFont_wght.ttf);
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Fraunces";
-  src: url(../assets/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
-  font-display: swap;
-}
-
 :root {
   /* Colors */
 
@@ -58,13 +46,26 @@ body {
   padding: .75rem 0;
 }
 
+.add-to-cart:hover {
+  cursor: pointer;
+  background-color: var(--v-dark-blue);
+}
+.add-to-cart:focus {
+  background-color: var(--v-dark-blue);
+}
+
+.body-text {
+  color: var(--gray-blue);
+  line-height: 160%;
+}
+
 .container {
   position: absolute;
   top: 50%;
   left: 50%;
   display: flex;
   flex-direction: column;
-  transform: translate(-50%, 40%);
+  transform: translate(-50%, 8%);
   /* border: 2px solid black; */
   width: 80%;
   max-width: 343px;
@@ -80,8 +81,21 @@ body {
 
 .cta {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
+}
+
+.cta--price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.current-price {
+  font-family: 'Fraunces';
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--dark-cyan)
 }
 
 .fa-solid {
@@ -100,20 +114,39 @@ body {
   display: block;
 }
 
+.previous-price {
+  text-decoration: line-through;
+  color: var(--gray-blue);
+}
+
+.subtitle {
+  text-transform: uppercase;
+  color: var(--gray-blue);
+  letter-spacing: 4px;
+}
+
 .text {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
   margin: 0 auto;
-  width: 90%;
-  padding: 1rem 0;
+  width: 84%;
+  padding: 1.5rem 0;
 }
 
+.title {
+  color: var(--v-dark-blue);
+  font-family: 'Fraunces';
+  font-weight: 700;
+  font-size: 2rem;
+}
 
 @media screen and (min-width: 800px) {
   .container {
-    width: 50%;
-    max-width: 600px;
+    transform: translate(-50%, 50%);
+    /* width: 50%; */
+    max-width: 550px;
   }
   .content-container {
     grid-template-columns: 1fr 1fr;
