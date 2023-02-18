@@ -131,7 +131,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   margin: 0 auto;
-  width: 71%;
+  width: 75%;
   padding: 1.5rem 0;
 }
 
@@ -140,11 +140,12 @@ body {
   font-family: 'Fraunces';
   font-weight: 700;
   font-size: 2rem;
+  line-height: 2.1rem;
 }
 
 @media screen and (min-width: 800px) {
   .container--small-width {
-    max-width: 650px;
+    max-width: 612px;
   }
 
   .content-container {
@@ -155,9 +156,9 @@ body {
     background-image: url("../images/image-product-desktop.avif");
   }
   .text {
-    padding: .75rem 0;
+    padding: 2rem 0;
     gap: 0;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 
