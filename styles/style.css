@@ -23,6 +23,11 @@ body {
 }
 
 .attribution {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  width: 90%;
+  transform: translate( -50%, -50%);
   font-size: 1rem;
   text-align: center;
   margin-top: 1rem;
