@@ -105,7 +105,7 @@ body {
 .image-wrapper {
   padding-top: var(--mobile-aspect);
   position: relative;
-  background-image: url("../images/image-product-mobile.jpg");
+  background-image: url("../images/image-product-mobile.avif");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -153,7 +153,7 @@ body {
   }
   .image-wrapper {
     padding-top: var(--desktop-aspect);
-    background-image: url("../images/image-product-desktop.jpg");
+    background-image: url("../images/image-product-desktop.avif");
   }
 }
 
