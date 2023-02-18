@@ -24,7 +24,7 @@ body {
 
 .attribution {
   position: absolute;
-  bottom: 2%;
+  bottom: 5%;
   left: 50%;
   width: 90%;
   transform: translate( -50%, -50%);
